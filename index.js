@@ -15,6 +15,10 @@ app.use(cors());
 // post
 app.use("/api/post",CreatePostRouter)
 
+app.use("/", (req,res)  => {
+  res.send("Blog api")
+})
+
 const mongoDbUrl = process.env.MONGODB_URL;
 const dbName = process.env.DB_NAME;
 
